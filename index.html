@@ -1,0 +1,200 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Диспетчер управления IMU</title>
+	<link rel="stylesheet" type="text/css" href="style.css">
+
+	<!-- <script type="text/javascript" src="firstGraf.js"></script>
+	<script type="text/javascript" src="secondGraf.js"></script>
+	<script type="text/javascript" src="thirdGraf.js"></script>
+	<script type="text/javascript" src="fourthGraf.js"></script>
+	<script type="text/javascript" src="firstGrafIn.js"></script>
+	<script type="text/javascript" src="secondGrafIn.js"></script>
+	<script type="text/javascript" src="thirdGrafIn.js"></script>
+	<script type="text/javascript" src="fourthGrafIn.js"></script> -->
+	<!-- <script type="text/javascript" src="graf.js"></script> -->
+
+
+</head>
+<body>
+	<h1 class="mainTitle">Диспетчер управления IMU</h1>
+	<content>
+		<form>
+			<div class="choseUse">
+				<p class="choseText">Выбор датчика:</p>
+				<select id="useDat" class="choseDat" multiple name="use">
+					
+				</select>
+			</div>
+			<div class="connect">
+				<input id="connect" type="button" name="" value="Подключить">
+				<input id="disconnect" class="disconnect" type="button" name="" value="Отключить">
+			</div>
+
+			<div class="dataTranport">
+				<p>Передача данных</p>
+				<input class="firstInput" type="button" name="" value="Старт">
+				<input class="secondInput"  type="button" name="" value="Стоп">
+			</div>
+
+			<div class="sendComand">
+				<p>Отправить команду</p><br>
+				<input class="comandText" placeholder="   Введите команду:" type="text" name="">
+				 
+				<input id="send" class="buttonSend" type="button" name="" value="Отправить">
+				<input class="datText" disabled="true" placeholder="   Ответ датчика" type="text" name="">
+			</div>
+			<div class="saveFile">
+				<p>Сохранить в файл</p>
+				<input class="choseFile" type="text" name="" placeholder="Имя файла">
+				<select class="typeFile">
+					<option value="json">json</option>
+					<option value="csv">csv</option>
+					<option value="plain text">plain text</option>
+				</select>
+				<a id="textSave" href="#"></a>
+				<!-- <input class="buttonFile" type="file" name="" value="Обзор"> -->
+				<input type="button" id="choseFile" class="sendButton" name="" value="Отправить">
+				<br>
+				<br>
+
+
+			</div>
+
+			<div class="segment">
+				<p class="typeSegment">Ввод типа для сегментации</p>
+				<input class="segment1" type="text" placeholder="Сегментация 1" name="">
+				<input class="segment2" type="text" placeholder="Сегментация 2" name="">
+				<input type="button" id="segment" class="sendButton" name="" value="Отправить">
+
+			</div>
+
+			<div>
+				<p>Ввод типа входных данных</p><br>
+				<div class="firstAccelor">
+					<p class="accelero1">Акселерометр№1</p>
+					<select class="typeOne">
+						<option value="type1">Тип1</option>
+						<option value="type2">Тип2</option>
+						<option value="type3">Тип3</option>
+					</select>
+					<input class="x x1" type="text" name="" placeholder="x">
+					<input class="y y1" type="text" name="" placeholder="y">
+					<input class="z z1" type="text" name="" placeholder="z">
+				</div>
+				<div>
+				<p class="accelero1">Акселерометр№2</p>
+				<select class="typeOne typeTwo">
+					<option value="type1">Тип1</option>
+					<option value="type2">Тип2</option>
+					<option value="type3">Тип3</option>
+				</select>
+				<input class="x x2" type="text" name="" placeholder="x">
+				<input class="y y2" type="text" name="" placeholder="y">
+				<input class="z z2" type="text" name="" placeholder="z">
+				<input type="button" id="accselType" class="sendButton" name="" value="Отправить">
+				</div>
+			</div>
+			<footer>
+				
+			</footer>
+		</form>
+		<div class="grafOutput">
+			<p>Вывод</p>
+			<a id="go"><div id="curve_chart" class="firstGraf"  ></div></a>
+			<a id="go2"><div id="curve_chart2" class="secondGraf"  ></div></a>
+			<a id="go3"><div id="curve_chart3" class="thirdGraf"  ></div></a>
+			<a id="go4"><div id="curve_chart4" class="fourthGraf"  ></div></a>
+		</div>
+		<div class="grafInput">
+			<p>Ввод</p>
+			<a id="go5"><div id="curve_chart5" class="firstGrafIn"  ></div></a>
+			<a id="go6"><div id="curve_chart6" class="secondGrafIn"  ></div></a>
+			<a id="go7"><div id="curve_chart7" class="thirdGrafIn"  ></div></a>
+			<a id="go8"><div id="curve_chart8" class="fourthGrafIn"  ></div></a>
+		</div>
+	</content>
+
+
+	<div id="modal_form"><!-- Сaмo oкнo --> 
+      <span id="modal_close">X</span> <!-- Кнoпкa зaкрыть --> 
+
+      <div  width="1200px" height="500px" class=""></div>
+</div>
+<div id="overlay"></div><!-- Пoдлoжкa -->
+
+
+	<div id="modal_form2"><!-- Сaмo oкнo --> 
+      <span id="modal_close1">X</span> <!-- Кнoпкa зaкрыть --> 
+
+      <div  width="1200px" height="500px" class=""></div>
+</div>
+<div id="overlay"></div><!-- Пoдлoжкa -->
+
+
+
+	<div id="modal_form3"><!-- Сaмo oкнo --> 
+      <span id="modal_close1">X</span> <!-- Кнoпкa зaкрыть --> 
+
+      <div  width="1200px" height="500px" class=""></div>
+</div>
+<div id="overlay"></div><!-- Пoдлoжкa -->
+
+
+	<div id="modal_form4"><!-- Сaмo oкнo --> 
+      <span id="modal_close1">X</span> <!-- Кнoпкa зaкрыть --> 
+
+      <div  width="1200px" height="500px" class=""></div>
+</div>
+<div id="overlay"></div><!-- Пoдлoжкa -->
+
+
+
+	<div id="modal_form5"><!-- Сaмo oкнo --> 
+      <span id="modal_close1">X</span> <!-- Кнoпкa зaкрыть --> 
+
+      <div  width="1200px" height="500px" class=""></div>
+</div>
+<div id="overlay"></div><!-- Пoдлoжкa -->
+
+
+
+
+	<div id="modal_form6"><!-- Сaмo oкнo --> 
+      <span id="modal_close1">X</span> <!-- Кнoпкa зaкрыть --> 
+
+      <div  width="1200px" height="500px" class=""></div>
+</div>
+<div id="overlay"></div><!-- Пoдлoжкa -->
+
+
+
+
+	<div id="modal_form7"><!-- Сaмo oкнo --> 
+      <span id="modal_close1">X</span> <!-- Кнoпкa зaкрыть --> 
+
+      <div  width="1200px" height="500px" class=""></div>
+</div>
+<div id="overlay"></div><!-- Пoдлoжкa -->
+
+
+
+
+	<div id="modal_form8"><!-- Сaмo oкнo --> 
+      <span id="modal_close1">X</span> <!-- Кнoпкa зaкрыть --> 
+
+      <div  width="1200px" height="500px" class=""></div>
+</div>
+<div id="overlay"></div><!-- Пoдлoжкa -->
+
+
+
+	<script type="text/javascript" src="https://www.gstatic.com/charts/loader.js"></script>
+	<script type="text/javascript" src="https://www.amcharts.com/lib/3/amcharts.js"></script>
+	<script type="text/javascript" src="https://www.amcharts.com/lib/3/serial.js"></script>
+	<script type="text/javascript" src="https://code.jquery.com/jquery-3.1.1.min.js"></script>
+	<script type="text/javascript" src="amGraf.js"></script>
+	<script type="text/javascript" src="var.js"></script>
+</body>
+</html>
