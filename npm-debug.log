@@ -1,0 +1,90 @@
+0 info it worked if it ends with ok
+1 verbose cli [ 'c:\\Program Files\\nodejs\\node.exe',
+1 verbose cli   'c:\\Program Files\\nodejs\\node_modules\\npm\\bin\\npm-cli.js',
+1 verbose cli   'install' ]
+2 info using npm@1.4.28
+3 info using node@v0.10.33
+4 warn package.json graf@1.0.0 No description
+5 warn package.json graf@1.0.0 No README data
+6 verbose readDependencies using package.json deps
+7 verbose install where, deps [ 'c:\\Users\\proel\\Desktop\\graf',
+7 verbose install   [ 'amcharts3', 'http-server', 'jquery' ] ]
+8 info preinstall graf@1.0.0
+9 verbose readDependencies using package.json deps
+10 verbose cache add [ 'amcharts3@^3.20.17', null ]
+11 verbose cache add name=undefined spec="amcharts3@^3.20.17" args=["amcharts3@^3.20.17",null]
+12 verbose parsed url { protocol: null,
+12 verbose parsed url   slashes: null,
+12 verbose parsed url   auth: null,
+12 verbose parsed url   host: null,
+12 verbose parsed url   port: null,
+12 verbose parsed url   hostname: null,
+12 verbose parsed url   hash: null,
+12 verbose parsed url   search: null,
+12 verbose parsed url   query: null,
+12 verbose parsed url   pathname: 'amcharts3@^3.20.17',
+12 verbose parsed url   path: 'amcharts3@^3.20.17',
+12 verbose parsed url   href: 'amcharts3@^3.20.17' }
+13 verbose already installed skipping http-server@^0.9.0 c:\Users\proel\Desktop\graf
+14 verbose already installed skipping jquery@^3.1.1 c:\Users\proel\Desktop\graf
+15 verbose cache add name="amcharts3" spec="^3.20.17" args=["amcharts3","^3.20.17"]
+16 verbose parsed url { protocol: null,
+16 verbose parsed url   slashes: null,
+16 verbose parsed url   auth: null,
+16 verbose parsed url   host: null,
+16 verbose parsed url   port: null,
+16 verbose parsed url   hostname: null,
+16 verbose parsed url   hash: null,
+16 verbose parsed url   search: null,
+16 verbose parsed url   query: null,
+16 verbose parsed url   pathname: '^3.20.17',
+16 verbose parsed url   path: '^3.20.17',
+16 verbose parsed url   href: '^3.20.17' }
+17 verbose addNamed [ 'amcharts3', '^3.20.17' ]
+18 verbose addNamed [ null, '>=3.20.17-0 <4.0.0-0' ]
+19 silly lockFile b49f0876-amcharts3-3-20-17 amcharts3@^3.20.17
+20 verbose lock amcharts3@^3.20.17 C:\Users\proel\AppData\Roaming\npm-cache\b49f0876-amcharts3-3-20-17.lock
+21 silly addNameRange { name: 'amcharts3',
+21 silly addNameRange   range: '>=3.20.17-0 <4.0.0-0',
+21 silly addNameRange   hasData: false }
+22 verbose request where is /amcharts3
+23 verbose request registry https://registry.npmjs.org/
+24 verbose request id 4d4223139cc39849
+25 verbose url raw /amcharts3
+26 verbose url resolving [ 'https://registry.npmjs.org/', './amcharts3' ]
+27 verbose url resolved https://registry.npmjs.org/amcharts3
+28 verbose request where is https://registry.npmjs.org/amcharts3
+29 info trying registry request attempt 1 at 12:13:56
+30 http GET https://registry.npmjs.org/amcharts3
+31 http 404 https://registry.npmjs.org/amcharts3
+32 silly registry.get cb [ 404,
+32 silly registry.get   { 'content-type': 'application/json',
+32 silly registry.get     'cache-control': 'max-age=0',
+32 silly registry.get     'content-length': '2',
+32 silly registry.get     'accept-ranges': 'bytes',
+32 silly registry.get     date: 'Thu, 10 Nov 2016 09:13:59 GMT',
+32 silly registry.get     via: '1.1 varnish',
+32 silly registry.get     age: '0',
+32 silly registry.get     connection: 'keep-alive',
+32 silly registry.get     'x-served-by': 'cache-bma7020-BMA',
+32 silly registry.get     'x-cache': 'MISS',
+32 silly registry.get     'x-cache-hits': '0',
+32 silly registry.get     'x-timer': 'S1478769239.358407,VS0,VE121',
+32 silly registry.get     vary: 'Accept-Encoding' } ]
+33 silly lockFile b49f0876-amcharts3-3-20-17 amcharts3@^3.20.17
+34 silly lockFile b49f0876-amcharts3-3-20-17 amcharts3@^3.20.17
+35 error 404 Not Found
+35 error 404
+35 error 404 'amcharts3' is not in the npm registry.
+35 error 404 You should bug the author to publish it
+35 error 404 It was specified as a dependency of 'graf'
+35 error 404
+35 error 404 Note that you can also install from a
+35 error 404 tarball, folder, or http url, or git url.
+36 error System Windows_NT 6.2.9200
+37 error command "c:\\Program Files\\nodejs\\node.exe" "c:\\Program Files\\nodejs\\node_modules\\npm\\bin\\npm-cli.js" "install"
+38 error cwd c:\Users\proel\Desktop\graf
+39 error node -v v0.10.33
+40 error npm -v 1.4.28
+41 error code E404
+42 verbose exit [ 1, true ]
