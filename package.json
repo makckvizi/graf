@@ -10,7 +10,7 @@
   },
   "devDependencies": {},
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+  "dev": "./node_modules/http-server/bin/http-server ./ -a localhost -p 8080 —cors -c-1"
   },
   "repository": {
     "type": "git",
